@@ -1,0 +1,8 @@
+<div class="card mb-3 carta">
+    <img class="card-img-top" [src]="miUser.image" [alt]="miUser.first_name">
+    <div class="card-body">
+      <h5 class="card-title" >{{miUser.first_name}} {{miUser.last_name}}</h5>
+      
+      <app-botones [parent]="'card'" [idPersona]="miUser._id"></app-botones>
+    </div>
+  </div>

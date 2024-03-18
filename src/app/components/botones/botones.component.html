@@ -1,0 +1,21 @@
+<div class="d-flex gap-2 text-center align-middle">
+    @if (parent === 'card' ) {
+
+        <a [routerLink]="['/user', idPersona]" class="btn prueba5" >
+            <img src="assets\icons\ver.png" alt="Ver detalles" class="prueba"> <h6 class="">Ver detalles</h6>
+         </a>
+        <a [routerLink]="['/updateuser', 'user', idPersona]" class="btn" >
+            <img src="assets\icons\actualizar-pagina.png" alt="Update" class="prueba">
+             <h6>Actualizar</h6></a>
+        <button class="btn" (click)="borrarPersona(idPersona)">
+            <img src="assets\icons\goma-de-borrar.png" alt="Delete" class="prueba"> <h6>Borrar</h6> </button>
+
+    } @else if (parent === 'view') {
+
+        <button class="btn btn-warning" (click)="borrarPersona(idPersona)"> Eliminar </button>
+        <a [routerLink]="['/updateuser', 'user', idPersona]" class="btn btn-success"> Actualizar </a>
+        <a [routerLink]="['/home']" class="btn btn-secondary" > Volver al listado </a>
+
+    }
+
+</div>

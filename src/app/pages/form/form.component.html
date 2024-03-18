@@ -1,0 +1,37 @@
+<section>
+    <h2>{{tipo}} USUARIO</h2>
+    <hr>
+    <form [formGroup]="personasForm" (ngSubmit)="getDataForm()">
+        <div>
+            <label class="form-label mt-2" for="first_name">Nombre del Usuario</label>
+            <input class="form-control" type="text" id="first_name" formControlName="first_name">
+        </div>
+        <div>
+            <label class="form-label mt-2" for="last_name"> Apellido del Usuario</label>
+            <input class="form-control" type="text" id="last_name" formControlName="last_name">
+        </div>
+        <div>
+            <label class="form-label mt-2" for="email">Email del Usuario</label>
+            <input class="form-control" type="text" id="email" formControlName="email">
+            @if (personasForm.get('email')?.hasError('pattern') && personasForm.get('email')?.touched) {
+                <p class="error"> El Email no cumple los requisitos</p>
+            }
+        </div>
+        <div>
+            <label class="form-label mt-2" for="image">Imagen del Usuario</label>
+            <input class="form-control" type="text" id="image" formControlName="image">
+        </div>
+        <div>
+            <label class="form-label mt-2" for="username">Username del Usuario</label>
+            <input class="form-control" type="text" id="username" formControlName="username">
+        </div>
+        <div>
+            <label class="form-label mt-2" for="password">Contraseña del Usuario</label>
+            <input class="form-control" type="text" id="password" formControlName="password">
+        </div>
+        <input type="submit" value="Enviar" [disabled]="!personasForm.valid" class="btn btn-success mt-3">
+        
+        
+    </form>
+
+</section>

@@ -1,0 +1,19 @@
+<section class="container">
+  <header class="d-flex justify-content-between ">
+    <a [routerLink]="['/home']" class="btn">
+      <img  src="\assets\icons\diseno-de-logo.png"  alt="Logo" class="logo-img">
+    </a>
+    
+    <div class="d-flex align-items-center">
+      <a [routerLink]="['/home']" class="btn"> Home </a>
+      <a [routerLink]="['/newuser', 'user']" class="btn"> Nuevo usuario </a>
+    </div>
+  
+  </header>
+  <hr>
+    <div class="container mt-3">
+    <router-outlet />
+  </div>
+  
+</section>
+

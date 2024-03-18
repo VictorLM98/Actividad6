@@ -1,0 +1,16 @@
+<div class="row">
+     @for (persona of arrPersonasPerPage; track persona._id) {
+        <article class="col-12 col-md6 col-md-3">
+            <app-persona-card [miUser]="persona"></app-persona-card>     
+        </article>
+}
+
+</div>
+
+<nav class="d-flex justify-content-center">
+    <ul class="pagination">
+        <li class="page-item"><button class="page-link" (click)="backTo()">Previous</button></li>
+        <li class="page-item"><span class="page-link">{{currentPage}}</span></li>
+        <li class="page-item"><button class="page-link" (click)="nextTo()">Next</button></li>
+    </ul>
+</nav>
